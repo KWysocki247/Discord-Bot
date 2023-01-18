@@ -4,6 +4,10 @@ const {token} = require('./config.json');
 const LarryPic = ('\pic\\tunnel.png');
 const RioPic = ('\pic\\turtle.png');
 const VinPic = ('\pic\\satchel.png');
+const workLarry = ('\pic\\larryWork.png');
+const doesHeKnow = ('\pic\\does.png');
+const vinOil = ('\pic\\vinoil.png');
+const plobRaid = ('\pic\\plobraid.png');
 
 bot.on('ready', () =>{
     console.log('This bot is online');
@@ -20,17 +24,20 @@ bot.on('message', msg=>{
     else if(userMessage === "!RIPLARRY"){
         msg.channel.send("RIP to Larry's steam account 12/31/2021. Got scammed trying to get rust skins");
     }
+    else if(userMessage == "!LARRYOUTSIDE"){
+        msg.channel.send("", {files: [workLarry]});
+    }
+	else if(userMessage == "!DOESHEKNOW"){
+        msg.channel.send("", {files: [doesHeKnow]});
+    }
+	else if(userMessage == "!RIPVIN"){
+        msg.channel.send("VINBO RUN YOU HAVE FULL METAL AK AND THERE IS A SCARY HEAVY SCIENTIST!!!!!", {files: [vinOil]});
+    }
+	else if(userMessage == "!PLOBRAID"){
+        msg.channel.send("YO GUYS THERE IS A GOOPED WOODEN BASE!", {files: [plobRaid]});
+    }
     else if(userMessage === "!RIO"){
         msg.channel.send("Uh oh Rio - Be careful what you say! Sunshine is lurking!", {files: [RioPic]});
-    }
-    else if(userMessage === "!ZOE"){
-        msg.channel.send("zoe said she wanted to play rust 3 months ago and never got on C;");
-    }
-    else if(userMessage === "!ZOE2"){
-        msg.channel.send("Zoe you have missed another 10 minute scheduled discord session :(");
-    }
-    else if(userMessage === "!ZOE3"){
-        msg.channel.send("Zoe I apologize for not having scheduled messages implemented :(");
     }
     else if(userMessage == "!VINBO"){
         msg.channel.send("DiD tHe SaTcHeL cHaRgE bLoW uP yEt. It'S bEeN 6 yEaRs -  Vincent", {files: [VinPic]});
